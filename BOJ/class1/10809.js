@@ -1,4 +1,7 @@
-/*알파벳 찾기 */
+/*알파벳 찾기 
+baekjoon
+1 0 -1 -1 2 -1 -1 -1 -1 4 3 -1 -1 7 5 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+*/
 
 const input = require('fs').readFileSync('/dev/stdin').toString().trim();
 let result = [];
