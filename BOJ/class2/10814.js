@@ -11,7 +11,7 @@
 
 const fs = require('fs');
 const [N, ...input] = fs.readFileSync('/dev/stdin').toString().trim().split('\n');
-input.sort((a, b) => a.split(' ')[0] - b.split(' '[0]));
+input.sort((a, b) => a.split(' ')[0] - b.split(' ')[0]);
 console.log(input.join('\n'));
 
 // parseInt로 입력값 중 나이만 남겨 비교하는 방법 (가장 빠른 시간)
