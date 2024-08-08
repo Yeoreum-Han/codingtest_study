@@ -69,3 +69,35 @@ push() / pop() / peek()
 ## 큐
 FIFO인 선형 자료구조  
 enqueue() / dequeue()
+
+
+## 연결리스트(Linked List)  
+random access 불가능 
+리스트의 n번째 노드 방문지 O(n)시간 소요  
+-> head노드에서 시작해 n번째 노드까지 가야하므로  
+노드 삽입 & 삭제 -> 배열(O(n))보다 빠를 수 있다.   
+
+### 단일 연결 리스트 (Single Linked List)
+Node (값 + 포인터(next)) / head 노드에서 시작 tail 노드에서 끝 / tail 노드의 next포인터는 null값  
+
+### 이중 연결 리스트 (Doubly Linked List)  
+Node (값 + 포인터(next, **prev**)) / head 노드에서 시작 tail 노드에서 끝 / tail 노드의 next포인터는 null값 / prev포인터의 값은 이전 Node의 원소값  
+
+### 원형 연결 리스트 (Circular Linked List)
+Node (값 + 포인터(next)) / head 노드에서 시작 tail 노드에서 끝 / tail 노드의 next포인터는 head 노드의 원소값  
+
+### 구현
+```js
+class Node {
+    constructor(data){
+        this.data = data;
+        this.next = null;
+    }
+}
+
+let head = new Node('a');           // a
+head.next = new Node('b');          // a -> b
+head.next.next = new Node('c');     // a -> b -> c
+head.next.next = new Node('d');     // a -> b -> c -> d
+
+```
